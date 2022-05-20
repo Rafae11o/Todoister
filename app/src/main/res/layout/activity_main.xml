@@ -30,6 +30,43 @@
         app:srcCompat="@android:drawable/ic_input_add"
         tools:ignore="ContentDescription" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/loading_todo_list"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+        <LinearLayout
+            android:id="@+id/empty_list_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/empty_list"
+                android:textSize="20sp"
+                android:textColor="@color/mBlack"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/empty_list_create_new_task_msg"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -40,7 +77,6 @@
         android:visibility="visible">
 
     </androidx.recyclerview.widget.RecyclerView>
-
 
     <include layout="@layout/bottom_sheet"/>
 
