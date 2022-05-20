@@ -39,4 +39,7 @@
     <string name="something_went_wrong">Something went wrong</string>
     <string name="updated_successfully">Task has been updated successfully</string>
     <string name="something_wrong_with_due_date_or_priority">Something wrong with priority or due date</string>
+    <string name="log_out">Log out</string>
+    <string name="empty_list">Your list is empty</string>
+    <string name="empty_list_create_new_task_msg">Click the \'+\' button to create new task</string>
 </resources>
