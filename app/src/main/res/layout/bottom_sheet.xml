@@ -6,7 +6,6 @@
     style="@style/Animation.Design.BottomSheetDialog"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
     app:behavior_hideable="false"
     app:behavior_peekHeight="@dimen/dimen_32"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">

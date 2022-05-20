@@ -28,7 +28,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_input_add"
-        tools:ignore="ContentDescription" />
+        />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -44,7 +44,7 @@
             />
 
         <LinearLayout
-            android:id="@+id/empty_list_msg"
+            android:id="@+id/empty_list_msg_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -53,16 +53,17 @@
             android:visibility="gone">
 
             <TextView
+                android:id="@+id/empty_list_header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/empty_list"
-                android:textSize="20sp"
-                android:textColor="@color/mBlack"/>
+                android:text="@string/empty_list_header"
+                android:textSize="20sp"/>
 
             <TextView
+                android:id="@+id/empty_list_msg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/empty_list_create_new_task_msg"/>
+                android:text="@string/empty_list_msg"/>
 
         </LinearLayout>
 

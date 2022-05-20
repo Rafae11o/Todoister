@@ -23,6 +23,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.chip.Chip;
@@ -31,7 +32,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
-import com.google.firebase.database.DataSnapshot;
 import com.rafael.todoister.model.SharedViewModel;
 import com.rafael.todoister.model.Task;
 import com.rafael.todoister.model.TaskViewModel;
@@ -106,8 +106,16 @@ public class MainActivity extends AppCompatActivity {
                 if (progressBar != null) {
                     progressBar.setVisibility(View.GONE);
                 }
-                LinearLayout emptyListMsgGroup = findViewById(R.id.empty_list_msg);
-                emptyListMsgGroup.setVisibility(getItemCount() == 0 ? View.VISIBLE : View.GONE);
+                if(getItemCount() == 0) {
+                    TextView emptyListHeader = findViewById(R.id.empty_list_header);
+                    emptyListHeader.setText(R.string.empty_list_header);
+                    TextView emptyListMsg = findViewById(R.id.empty_list_msg);
+                    emptyListMsg.setText(R.string.empty_list_msg);
+                    LinearLayout emptyListMsgGroup = findViewById(R.id.empty_list_msg_group);
+                    emptyListMsgGroup.setVisibility(getItemCount() == 0 ? View.VISIBLE : View.GONE);
+                } else if(findViewById(R.id.empty_list_msg_group).getVisibility() == View.VISIBLE) {
+                    findViewById(R.id.empty_list_msg_group).setVisibility(View.GONE);
+                }
             }
 
             @Override
