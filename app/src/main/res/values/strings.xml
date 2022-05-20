@@ -11,7 +11,6 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="tv_description">Testing this thing..</string>
     <string name="tv_title">Title</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="enter_todo_hint">e.g., Eat less at dinner</string>
     <string name="today_calendar_button">Today</string>
@@ -26,4 +25,18 @@
     <string name="radio_low">Low</string>
     <string name="image_description">button image</string>
     <string name="add_todos">Add a Todo...</string>
+    <string name="email">Email</string>
+    <string name="name">Full name</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="app_to_manage_your_tasks">App to manage your tasks</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="fri_may_20">Fri, May 20</string>
+    <string name="high">High</string>
+    <string name="saved_successfully">Task has been saved successfully</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="updated_successfully">Task has been updated successfully</string>
+    <string name="something_wrong_with_due_date_or_priority">Something wrong with priority or due date</string>
 </resources>
