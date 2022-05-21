@@ -178,8 +178,12 @@ public class BottomSheetFragment extends BottomSheetDialogFragment implements Vi
             );
             TaskViewModel.save(mTask).addOnCompleteListener(task1 -> {
                 if(task1.isSuccessful()) {
-                    Snackbar.make(saveButton, R.string.saved_successfully, Snackbar.LENGTH_LONG).show();
                     enterTodo.setText("");
+                    setPriority(Priority.LOW);
+                    calendar.setTime(new Date());
+                    calendar.add(Calendar.DAY_OF_YEAR, 0);
+                    setDueDate(calendar.getTime());
+                    Snackbar.make(saveButton, R.string.saved_successfully, Snackbar.LENGTH_LONG).show();
                     if(this.isVisible()) {
                         this.dismiss();
                     }
